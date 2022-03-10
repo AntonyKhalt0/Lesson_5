@@ -7,7 +7,7 @@ class Train
   attr_reader :number, :wagons, :route, :speed, :current_station
 
   @@trains_list = []
-  @@instances = 0
+  @instance_count = 0
 
   class << self
     def add_trains_list(train)
@@ -26,7 +26,7 @@ class Train
     @number = number
     @wagons = []
     @speed = 0
-    self.class.register_instance
+    register_instance
   end
 
   def speed_dial(boost)

@@ -6,11 +6,13 @@ module InstanceCounter
 
   module ClassMethods
     def instances
-      self.instances
+      @instance_count
     end
   end
 
   module InstanceMethods
+    protected
+
     def register_instance
       self.class.instances += 1 
     end

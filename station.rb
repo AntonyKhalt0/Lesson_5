@@ -5,9 +5,10 @@ class Station
   attr_reader :name, :trains_list
 
   @@stations_list = []
-  @@instances = 0
+  @instance_count = 0
 
   class << self
+
     def add_station_list(station)
       @@stations_list.push(station)
     end
@@ -23,7 +24,7 @@ class Station
   def initialize(name)
     @name = name
     @trains_list = []
-    self.class.register_instance
+    register_instance
   end
 
   def add_train(train)
