@@ -1,8 +1,8 @@
 require_relative 'train'
+require_relative 'instance_counter'
 
 class PassengerTrain < Train
   attr_reader :type
-  @instance_count = 0
 
   def initialize
     super

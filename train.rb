@@ -7,7 +7,6 @@ class Train
   attr_reader :number, :wagons, :route, :speed, :current_station
 
   @@trains_list = []
-  @instance_count = 0
 
   class << self
     def add_trains_list(train)

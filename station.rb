@@ -5,10 +5,8 @@ class Station
   attr_reader :name, :trains_list
 
   @@stations_list = []
-  @instance_count = 0
 
-  class << self
-
+  class << self            
     def add_station_list(station)
       @@stations_list.push(station)
     end
@@ -38,5 +36,4 @@ class Station
   def show_trains_on_station_by_type(type)
     @trains_list.select { |train| train.type == type }
   end
-
 end
